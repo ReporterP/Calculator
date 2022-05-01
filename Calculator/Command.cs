@@ -11,9 +11,9 @@ namespace Calculator
             this.Pattern = pattern;
         }
         
-        public string Pattern { get; set; }
-        public string Description { get; set; }
-        public Action Action { get; set; }
+        public string Pattern { get; }
+        public string Description { get; }
+        public Action Action { get; }
 
     }
 }

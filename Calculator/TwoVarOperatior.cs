@@ -1,0 +1,17 @@
+using System;
+
+namespace Calculator
+{
+    public class TwoVarOperatior
+    {
+        public TwoVarOperatior(string pattern, string description, Func<double, double, double> use)
+        {
+            this.Pattern = pattern;
+            this.Description = description;
+            this.Use = use;
+        }
+        public string Pattern { get; }
+        public string Description { get; }
+        public Func<double, double, double> Use { get; }
+    }
+}

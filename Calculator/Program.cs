@@ -82,8 +82,8 @@ namespace Calculator
 
             if (inputData.Count > 1)
             {
-                foreach (var twoVarOperatior in TwoVarOperators.Where(twoVarOperatior =>
-                             inputData.Select(e => twoVarOperatior.Pattern == e).Any())) goto TwoVarOperators;
+                if (TwoVarOperators.Any(twoVarOperatior => inputData.Any(e => twoVarOperatior.Pattern == e)))
+                    goto TwoVarOperators;
                 throw new FormatException("Не правильный формат");
             }
 
